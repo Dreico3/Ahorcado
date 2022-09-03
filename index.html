@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/stilos.css" />
+        <title>Juego del ahorcado</title>
+    </head>
+    <body>
+        <section class="logo">
+            <img src="img/logo.svg" alt="logo del proyecto" />
+        </section>
+
+        <div id="contenedor" class="contenedor">
+            <section class="cont-agregar">
+                <input
+                    id="inp-palabra"
+                    type="text"
+                    placeholder="Ingresa una palabra"
+                />
+                <div class="agregar-alerta">
+                    <img src="img/alerta.svg" alt="alerta" />
+                    <span>Max. de 8 letras</span>
+                </div>
+            </section>
+
+            <section class="cont-jugar">
+                <div class="muñeco">
+                    <svg
+                        width="294"
+                        height="360"
+                        viewBox="0 0 294 360"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect
+                            y="355"
+                            width="294"
+                            height="5"
+                            rx="2.5"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            x="80.6748"
+                            width="177.75"
+                            height="4.5"
+                            rx="2.25"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            x="80.6748"
+                            width="4.5"
+                            height="360"
+                            rx="2.25"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            x="253.925"
+                            width="4.5"
+                            height="49.5"
+                            rx="2.25"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            class="cuerpo"
+                            x="253.925"
+                            y="108"
+                            width="4.5"
+                            height="135"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            class="pierna__izquierda"
+                            x="254.748"
+                            y="239.625"
+                            width="4.50155"
+                            height="72"
+                            rx="2.25078"
+                            transform="rotate(30 254.748 239.625)"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            class="pierna__derecha"
+                            width="4.50385"
+                            height="72"
+                            rx="2.25193"
+                            transform="matrix(-0.866025 0.5 0.5 0.866025 257.522 239.624)"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            class="brazo__derecho"
+                            width="4.49914"
+                            height="72"
+                            rx="2.24957"
+                            transform="matrix(-0.866025 0.5 0.5 0.866025 257.52 106.875)"
+                            fill="#0A3871"
+                        />
+                        <rect
+                            class="brazo__izquierdo"
+                            x="254.749"
+                            y="106.875"
+                            width="4.4994"
+                            height="72"
+                            rx="2.2497"
+                            transform="rotate(30 254.749 106.875)"
+                            fill="#0A3871"
+                        />
+                        <path
+                            class="cabeza"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M256.175 103.5C271.086 103.5 283.175 91.4117 283.175 76.5C283.175 61.5883 271.086 49.5 256.175 49.5C241.263 49.5 229.175 61.5883 229.175 76.5C229.175 91.4117 241.263 103.5 256.175 103.5ZM256.175 108C273.572 108 287.675 93.897 287.675 76.5C287.675 59.103 273.572 45 256.175 45C238.778 45 224.675 59.103 224.675 76.5C224.675 93.897 238.778 108 256.175 108Z"
+                            fill="#0A3871"
+                        />
+                    </svg>
+                </div>
+                <div class="adivina">
+
+                </div>
+            </section>
+        </div>
+
+        <div class="botones">
+            <section id="botones-inicio" class="pos-botoni">
+                <button id="btn-iniciar-juego" class="boton-azul">
+                    iniciar juego
+                </button>
+                <button id="btn-agregar-palabra" class="boton-blanco">
+                    agregar nueva palabra
+                </button>
+            </section>
+            <section id="botones-agregar" class="pos-boton">
+                <button id="btn-guardar" class="boton-azul">
+                    Guardar y empezar
+                </button>
+                <button id="btn-cancelar" class="boton-blanco">Cancelar</button>
+            </section>
+            <section id="botones-jugar" class="pos-boton">
+                <button id="btn-nuevo-juego" class="boton-azul">
+                    Nuevo juego
+                </button>
+                <button id="btn-rendirse" class="boton-blanco">Desistir</button>
+            </section>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

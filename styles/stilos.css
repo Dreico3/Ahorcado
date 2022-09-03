@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+    margin: 0;
+}
+body {
+    background-color: rgb(224, 207, 240);
+    font-family: "Inter", sans-serif;
+}
+.logo {
+    margin: 15px;
+}
+/*contenedor para poder agregar palabras*/
+.cont-agregar {
+    position: relative;
+    display: none;
+    background-color: azure;
+    height: 450px;
+    text-align: center;
+}
+.cont-agregar input {
+    width: 343px;
+    height: 48px;
+    font-size: 32px;
+    border: none;
+}
+.cont-agregar input::placeholder {
+    color: #0a3871;
+}
+.agregar-alerta {
+    position: absolute;
+    color: #495057;
+    font-size: 12px;
+    bottom: 5px;
+    left: 15px;
+}
+/*Fin --> contenedor para poder agregar palabras*/
+/*Contenedor para Jugar*/
+.cont-jugar {
+    display: none;
+    position: relative;
+    background-color: rgb(54, 122, 122);
+    height: 450px;
+    text-align: center;
+}
+.cabeza{
+    display: none;
+}
+.brazo__izquierdo{
+    display: none;
+}
+.brazo__derecho{
+    display: none;
+}
+.pierna__derecha{
+    display: none;
+}
+.pierna__izquierda{
+    display: none;
+}
+.cuerpo{
+    display: none;
+}
+
+.pa{
+    background-color:transparent;
+    border:none;
+    border-bottom: 3px solid #0a3871;
+    width:25px;
+    text-align: center;
+    color:#0a3871;
+    font-weight:bold;
+    font-size:30px;
+    margin:20px 0.3em;
+}
+
+/*Fin-->Contenedor para Jugar*/
+/*Contenedor de botones*/
+.botones section {
+    text-align: center;
+}
+.boton-azul {
+    background-color: #0a3871;
+    color: aliceblue;
+    border: none;
+    height: 50px;
+    width: 317px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.boton-blanco {
+    background-color: aliceblue;
+    color: #0a3871;
+    border: 1px solid;
+    height: 50px;
+    width: 317px;
+    border-radius: 15px;
+}
+.pos-botoni {
+    margin: 60% 0;
+    position: absolute;
+    height: 110px;
+}
+.pos-botoni .boton-azul {
+    height: 80px;
+}
+.pos-boton {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15%;
+}
+#botones-inicio {
+    display: none;
+}
+#botones-agregar {
+    display: none;
+}
+#botones-jugar {
+   /*  display: none; */
+}
+/*Fin --> Contenedor botones*/
