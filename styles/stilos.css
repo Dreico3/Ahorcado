@@ -114,12 +114,12 @@ body {
     margin-bottom: 15%;
 }
 #botones-inicio {
-    display: none;
+   /*  display: none; */
 }
 #botones-agregar {
     display: none;
 }
 #botones-jugar {
-   /*  display: none; */
+    display: none;
 }
 /*Fin --> Contenedor botones*/

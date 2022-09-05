@@ -4,9 +4,18 @@ const btnIniciarJuego=document.querySelector('#btn-iniciar-juego');
 const btnDesistir=document.querySelector('#btn-rendirse');
 const btnGuardarEmpezar=document.querySelector('#btn-guardar');
 const cajaAdivina=document.querySelector(".adivina");
+const btnNuevoJuego=document.querySelector("#botones-jugar");
 
-var palabras=["perro", "casa", "rama"];
-
+var palabras=["perro", "card", "los", "un"];
+function VaciarCaja(){
+    while (cajaAdivina.firstChild){
+        cajaAdivina.removeChild(cajaAdivina.firstChild);
+    };
+}
+function ReiniciarJuego(){
+    VaciarCaja();
+    EsconderPalabra(retornaAleatorio());
+}
 function CambiarAagregar(){
     document.querySelector("#botones-inicio").style.display="none";
     document.querySelector("#botones-agregar").style.display="block";
@@ -17,21 +26,37 @@ function Cancelar(){
     document.querySelector("#botones-agregar").style.display="none";
     document.querySelector(".cont-agregar").style.display="none";
 }
+
+function ControladorTeclas(e){
+    let palabra=palabras[idPalabra];
+    if(e.target.value==palabra[e.target.id-1]){
+        console.log("son iguales");
+    }else{
+        console.log("fallaste perra");
+    }
+}
 function EsconderPalabra(pa){
-    for (let i=1;i<pa.length;i++){
-        
+    //console.log(retornaAleatorio());
+    idPalabra=pa[1];
+    for (let i=1;i<=pa[0].length;i++){
         var ele=document.createElement("input");
         ele.setAttribute("id", i);
         ele.setAttribute("class", "pa");
         ele.setAttribute("maxlength", "1");
+        ele.onchange=ControladorTeclas;
         cajaAdivina.appendChild(ele);
     }
+}
+function retornaAleatorio(){
+    var r=Math.floor(Math.random() * palabras.length);
+    return [palabras[r],r]
 }
 function IniciarJuego(){
     document.querySelector("#botones-inicio").style.display="none";
     document.querySelector("#botones-jugar").style.display="block";
     document.querySelector(".cont-jugar").style.display="block";
-    EsconderPalabra("abatojar")
+    VaciarCaja();
+    EsconderPalabra(retornaAleatorio())
 }
 function Rendirse(){
     document.querySelector("#botones-inicio").style.display="block";
@@ -51,6 +76,7 @@ btnCancelar.onclick=Cancelar;
 btnIniciarJuego.onclick=IniciarJuego;
 btnDesistir.onclick=Rendirse;
 btnGuardarEmpezar.onclick=GuardarEmpezar;
+btnNuevoJuego.onclick=ReiniciarJuego;
 
 
 
