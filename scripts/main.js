@@ -7,13 +7,17 @@ const cajaAdivina=document.querySelector(".adivina");
 const btnNuevoJuego=document.querySelector("#botones-jugar");
 const btnReiniciar=document.querySelector('#reiniciarPer');
 const btnReiniciarGa=document.querySelector('#reiniciarGa');
-
-var palabras=["perro", "card", "los", "un"];
+const cajaLetrasFail=document.querySelector('.fail__letter');
+var idPalabra;
+var palabras=["perro", "carta", "puerta", "bosque"];
 var fallas=0;
 var aciertos=0;
 function VaciarCaja(){
     while (cajaAdivina.firstChild){
         cajaAdivina.removeChild(cajaAdivina.firstChild);
+    };
+    while (cajaLetrasFail.firstChild){
+        cajaLetrasFail.removeChild(cajaLetrasFail.firstChild);
     };
     while(fallas>0){
         document.querySelector(`#c${fallas}`).style.display="none";
@@ -38,14 +42,16 @@ function Cancelar(){
 function ControladorTeclas(e){
         let palabra=palabras[idPalabra];
         if(e.target.value.toLowerCase()==palabra[e.target.id-1]){
-            console.log("son iguales");
             aciertos+=1;
             
         }else{
-            console.log("fallaste perra");
-            fallas+=1
-            console.log(fallas);
+            fallas+=1;
             document.querySelector(`#c${fallas}`).style.display="block";
+            if(!palabra.includes(e.target.value.toLowerCase())){
+                var ele=document.createElement("p");
+                ele.innerHTML=e.target.value.toLowerCase();
+                cajaLetrasFail.appendChild(ele);
+            }
         }
         if(aciertos>=palabra.length){
             document.querySelector('.cont-ganador').style.display="block";
@@ -96,7 +102,6 @@ function GuardarEmpezar(){
         Cancelar()
         IniciarJuego();
         palabras.push(palabra);
-        console.log(palabras);
         document.querySelector("#inp-palabra").value="";
     }else{
         alert("la palabra introducida tiene mas de 8 letras")

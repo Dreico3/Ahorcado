@@ -13,7 +13,7 @@
         </section>
 
         <div id="contenedor" class="contenedor">
-            <section class="cont-agregar">
+            <section class="cont-agregar" for="inp-palabra">
                 <input
                     id="inp-palabra"
                     autocomplete="off"
@@ -117,11 +117,12 @@
                     </svg>
                 </div>
                 <div class="adivina"></div>
+                <div class="fail__letter"></div>
             </section>
 
             <section class="cont-perdedor">
                 <h1>Perdiste</h1>
-                <p>la palabra ecreta es:</p>
+                <p>la palabra secreta es:</p>
                 <h2 id="palabra__ganadora"></h2>
                 <button id="reiniciarPer" class="boton-blanco">Reiniciar</button>
             </section>

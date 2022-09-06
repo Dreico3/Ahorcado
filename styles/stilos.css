@@ -5,6 +5,7 @@
 }
 body {
     font-family: "Inter", sans-serif;
+    height:100vh;
 }
 .logo {
     margin: 15px;
@@ -13,7 +14,6 @@ body {
 .cont-agregar {
     position: relative;
     display: none;
-    background-color: azure;
     height: 450px;
     text-align: center;
 }
@@ -41,88 +41,99 @@ body {
     height: 450px;
     text-align: center;
 }
-#c1{
+#c1 {
     display: none;
 }
-#c2{
+#c2 {
     display: none;
 }
-#c3{
+#c3 {
     display: none;
 }
-#c6{
+#c6 {
     display: none;
 }
-#c5{
+#c5 {
     display: none;
 }
-#c4{
+#c4 {
     display: none;
 }
 
-.pa{
-    background-color:transparent;
-    border:none;
+.pa {
+    background-color: transparent;
+    border: none;
     border-bottom: 3px solid #0a3871;
-    width:25px;
+    width: 25px;
     text-align: center;
-    color:#0a3871;
-    font-weight:bold;
-    font-size:30px;
-    margin:20px 0.3em;
+    color: #0a3871;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px 0.3em;
 }
 /*Fin-->Contenedor para Jugar*/
 
 /*Contenedor de ventana perdedor*/
-.cont-perdedor{
+.cont-perdedor {
     display: none;
-    position:absolute;
-    color:white;
-    background-color:#0a3871;
-    top:0;
-    height:100vh;
-    width:100vw;
-    text-align:center;
-    z-index:100;
+    position: absolute;
+    color: white;
+    background-color: #0a3871;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 100;
 }
-.cont-perdedor h1{
-    margin-top:100px;
+.cont-perdedor h1 {
+    margin-top: 100px;
 }
-.cont-perdedor p{
-    margin-top:100px;
+.cont-perdedor p {
+    margin-top: 100px;
 }
-.cont-perdedor button{
-    margin-top:100px;
+.cont-perdedor button {
+    margin-top: 100px;
 }
 /*Fin-->Contenedor de ventana perdedor*/
 /*Contenedor de ventana ganador*/
-.cont-ganador{
-    display:none;
-    position:absolute;
-    color:white;
-    background-color:#0a3871;
-    top:0;
-    height:100vh;
-    width:100vw;
-    text-align:center;
-    z-index:500;
+.cont-ganador {
+    display: none;
+    position: absolute;
+    color: white;
+    background-color: #0a3871;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 500;
 }
-.cont-ganador h1{
-    margin-top:100px;
-    font-size:4em;
+.cont-ganador h1 {
+    margin-top: 100px;
+    font-size: 4em;
 }
-.cont-ganador p{
-    margin-top:100px;
+.cont-ganador p {
+    margin-top: 100px;
 }
-.cont-ganador button{
-    margin-top:100px;
+.cont-ganador button {
+    margin-top: 100px;
 }
 /*Fin-->Contenedor de ventana ganador*/
+/*contenedor de palabras erroneas*/
+.fail__letter {
+    color: #495057;
+}
+.fail__letter p {
+    display: inline-block;
+    font-size: 20px;
+    padding-right: 4px;
+}
+/*FIN -->contenedor de palabras erroneas*/
 /*Contenedor de botones*/
 .botones section {
     text-align: center;
 }
 .boton-azul {
+   
     background-color: #0a3871;
     color: aliceblue;
     border: none;
@@ -130,12 +141,9 @@ body {
     width: 317px;
     margin-bottom: 10px;
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
 }
 .boton-blanco {
+    
     background-color: aliceblue;
     color: #0a3871;
     border: 1px solid;
@@ -144,20 +152,24 @@ body {
     border-radius: 15px;
 }
 .pos-botoni {
-    margin: 60% 0;
-    position: absolute;
+    position: relative;
     height: 110px;
+    margin-top: 250px;
+}
+.pos-botoni button {
+    display: block;
+    margin:20px auto;
 }
 .pos-botoni .boton-azul {
     height: 80px;
 }
 .pos-boton {
+    
     position: relative;
-    top: 20px;
-    margin-bottom: 15%;
+    top: 40px;
 }
 #botones-inicio {
-   /*  display: none; */
+    /*  display: none; */
 }
 #botones-agregar {
     display: none;
@@ -166,3 +178,13 @@ body {
     display: none;
 }
 /*Fin --> Contenedor botones*/
+@media screen and (min-width: 800px){
+    .cont-agregar {
+        position: relative;
+        display: none;
+        height: 450px;
+        width:40em;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
