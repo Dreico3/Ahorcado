@@ -4,7 +4,6 @@
     margin: 0;
 }
 body {
-    background-color: rgb(224, 207, 240);
     font-family: "Inter", sans-serif;
 }
 .logo {
@@ -39,26 +38,25 @@ body {
 .cont-jugar {
     display: none;
     position: relative;
-    background-color: rgb(54, 122, 122);
     height: 450px;
     text-align: center;
 }
-.cabeza{
+#c1{
     display: none;
 }
-.brazo__izquierdo{
+#c2{
     display: none;
 }
-.brazo__derecho{
+#c3{
     display: none;
 }
-.pierna__derecha{
+#c6{
     display: none;
 }
-.pierna__izquierda{
+#c5{
     display: none;
 }
-.cuerpo{
+#c4{
     display: none;
 }
 
@@ -73,8 +71,53 @@ body {
     font-size:30px;
     margin:20px 0.3em;
 }
-
 /*Fin-->Contenedor para Jugar*/
+
+/*Contenedor de ventana perdedor*/
+.cont-perdedor{
+    display: none;
+    position:absolute;
+    color:white;
+    background-color:#0a3871;
+    top:0;
+    height:100vh;
+    width:100vw;
+    text-align:center;
+    z-index:100;
+}
+.cont-perdedor h1{
+    margin-top:100px;
+}
+.cont-perdedor p{
+    margin-top:100px;
+}
+.cont-perdedor button{
+    margin-top:100px;
+}
+/*Fin-->Contenedor de ventana perdedor*/
+/*Contenedor de ventana ganador*/
+.cont-ganador{
+    display:none;
+    position:absolute;
+    color:white;
+    background-color:#0a3871;
+    top:0;
+    height:100vh;
+    width:100vw;
+    text-align:center;
+    z-index:500;
+}
+.cont-ganador h1{
+    margin-top:100px;
+    font-size:4em;
+}
+.cont-ganador p{
+    margin-top:100px;
+}
+.cont-ganador button{
+    margin-top:100px;
+}
+/*Fin-->Contenedor de ventana ganador*/
 /*Contenedor de botones*/
 .botones section {
     text-align: center;
@@ -109,8 +152,8 @@ body {
     height: 80px;
 }
 .pos-boton {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    top: 20px;
     margin-bottom: 15%;
 }
 #botones-inicio {

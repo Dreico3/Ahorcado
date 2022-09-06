@@ -16,6 +16,7 @@
             <section class="cont-agregar">
                 <input
                     id="inp-palabra"
+                    autocomplete="off"
                     type="text"
                     placeholder="Ingresa una palabra"
                 />
@@ -63,7 +64,7 @@
                             fill="#0A3871"
                         />
                         <rect
-                            class="cuerpo"
+                            id="c4"
                             x="253.925"
                             y="108"
                             width="4.5"
@@ -71,7 +72,7 @@
                             fill="#0A3871"
                         />
                         <rect
-                            class="pierna__izquierda"
+                            id="c5"
                             x="254.748"
                             y="239.625"
                             width="4.50155"
@@ -81,7 +82,7 @@
                             fill="#0A3871"
                         />
                         <rect
-                            class="pierna__derecha"
+                            id="c6"
                             width="4.50385"
                             height="72"
                             rx="2.25193"
@@ -89,7 +90,7 @@
                             fill="#0A3871"
                         />
                         <rect
-                            class="brazo__derecho"
+                            id="c3"
                             width="4.49914"
                             height="72"
                             rx="2.24957"
@@ -97,7 +98,7 @@
                             fill="#0A3871"
                         />
                         <rect
-                            class="brazo__izquierdo"
+                            id="c2"
                             x="254.749"
                             y="106.875"
                             width="4.4994"
@@ -107,7 +108,7 @@
                             fill="#0A3871"
                         />
                         <path
-                            class="cabeza"
+                            id="c1"
                             fill-rule="evenodd"
                             clip-rule="evenodd"
                             d="M256.175 103.5C271.086 103.5 283.175 91.4117 283.175 76.5C283.175 61.5883 271.086 49.5 256.175 49.5C241.263 49.5 229.175 61.5883 229.175 76.5C229.175 91.4117 241.263 103.5 256.175 103.5ZM256.175 108C273.572 108 287.675 93.897 287.675 76.5C287.675 59.103 273.572 45 256.175 45C238.778 45 224.675 59.103 224.675 76.5C224.675 93.897 238.778 108 256.175 108Z"
@@ -115,9 +116,19 @@
                         />
                     </svg>
                 </div>
-                <div class="adivina">
+                <div class="adivina"></div>
+            </section>
 
-                </div>
+            <section class="cont-perdedor">
+                <h1>Perdiste</h1>
+                <p>la palabra ecreta es:</p>
+                <h2 id="palabra__ganadora"></h2>
+                <button id="reiniciarPer" class="boton-blanco">Reiniciar</button>
+            </section>
+            <section class="cont-ganador">
+                <h1>Ganador</h1>
+                <p>Enorabuena</p>
+                <button id="reiniciarGa" class="boton-blanco">Reiniciar</button>
             </section>
         </div>
 
