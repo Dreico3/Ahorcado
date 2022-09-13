@@ -23,6 +23,7 @@ function VaciarCaja(){
         document.querySelector(`#c${fallas}`).style.display="none";
         fallas-=1;
     }
+    aciertos=0;
 }
 function ReiniciarJuego(){
     VaciarCaja();
